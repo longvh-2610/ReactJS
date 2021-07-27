@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+function format(student) {
+  return 'Student: ' + student.name + ' majors: ' + student.majors +' from: '+ student.school;
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const student = {
+  name: 'Hoang Long',
+  school: 'VIEN DONG',
+  majors: 'IT'
+  
+};
+
+const element = (
+  <div className="App">
+    <h1>WELCOME</h1>
+    <p>
+     {format(student)}
+    </p>
+    <p> TIME : {new Date().toLocaleTimeString().replace(/:\d+ /, ' ')}.</p>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
