@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-function format(student) {
-  return 'Student: ' + student.name + ' majors: ' + student.majors +' from: '+ student.school;
-}
+import Example from'./Example';
 
 const student = {
   name: 'Hoang Long',
@@ -15,10 +13,9 @@ const student = {
 const element = (
   <div className="App">
     <h1>WELCOME</h1>
-    <p>
-     {format(student)}
-    </p>
+    <Example student={student}/>
     <p> TIME : {new Date().toLocaleTimeString().replace(/:\d+ /, ' ')}.</p>
+    
   </div>
 );
 
