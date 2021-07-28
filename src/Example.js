@@ -15,7 +15,7 @@ function Example(props) {
     );
 }
 Example.defaultProps = {
-    text: "hello world",
+    text: "Join With Us",
   };
 
 export default Example;
